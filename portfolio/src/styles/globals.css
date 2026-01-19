@@ -1,0 +1,101 @@
+/* ============================= */
+/* PRIMARY — INTER               */
+/* ============================= */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/primary/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/primary/Inter-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/primary/Inter-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/primary/Inter-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ============================= */
+/* MONO — JETBRAINS MONO         */
+/* ============================= */
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/fonts/mono/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/fonts/mono/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/fonts/mono/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ============================= */
+/* DISPLAY — CLASH DISPLAY       */
+/* ============================= */
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/display/ClashDisplay-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/display/ClashDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ============================= */
+/* GLOBAL DEFAULT                */
+/* ============================= */
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* FORCE LOAD FOR DEBUG */
+.force-clash {
+    font-family: ClashDisplay !important;
+}
+
+.force-mono {
+    font-family: JetBrainsMono !important;
+}
