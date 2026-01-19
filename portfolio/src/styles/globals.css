@@ -91,11 +91,15 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* FORCE LOAD FOR DEBUG */
-.force-clash {
-    font-family: ClashDisplay !important;
+ /*FORCE LOAD FOR DEBUG */
+.font-primary {
+    font-family: Inter, system-ui, sans-serif;
 }
 
-.force-mono {
-    font-family: JetBrainsMono !important;
+.font-display {
+    font-family: ClashDisplay, sans-serif;
+}
+
+.font-mono {
+    font-family: JetBrainsMono, monospace;
 }
