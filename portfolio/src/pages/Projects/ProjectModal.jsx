@@ -2,7 +2,7 @@ const ProjectModels = [
     {
         title: "E-Wallet Application",
         subtitle: "Microservices-based financial system",
-        image: "/images/project/wallet.png",
+        image: "/public/images/project/wallet.png",
         description:
             "The E-Wallet Application is a microservices-based backend system designed to simulate core digital wallet functionalities. The system allows users to create wallets, maintain balances, and perform secure peer-to-peer transactions. Each major responsibility is handled by an independent service, enabling scalability, fault isolation, and clean separation of concerns.",
         features: [
@@ -19,7 +19,7 @@ const ProjectModels = [
     {
         title: "Fitness Application",
         subtitle: "Event-driven microservices system",
-        image: "/images/project/fitness.png",
+        image: "public/images/project/fitness.png",
         description:
             "The Fitness Application is an event-driven backend system designed to process user fitness activities asynchronously. The application uses Apache Kafka to decouple services and handle high-frequency user events such as activity tracking and notifications.",
         features: [
@@ -36,7 +36,7 @@ const ProjectModels = [
     {
         title: "Kaizen Coaching Platform",
         subtitle: "Freelance full-stack web application",
-        image: "/images/project/kaizen.png",
+        image: "/public/images/project/kaizen.png",
         description:
             "Kaizen Coaching Platform is a full-stack web application developed as a freelance project for a coaching institute. The platform enables secure user management, course handling, and student enrollments through a well-structured backend and a responsive frontend.",
         features: [
@@ -53,7 +53,7 @@ const ProjectModels = [
     {
         title: "E-Commerce Backend System",
         subtitle: "Scalable backend architecture",
-        image: "/images/project/ecommerce.png",
+        image: "/public/images/project/ecommerce.png",
         description:
             "The E-Commerce Backend System is a REST-based backend application designed to manage core e-commerce operations such as products, orders, and users. The project follows a layered architecture and focuses on clean API design and data consistency.",
         features: [
@@ -70,7 +70,7 @@ const ProjectModels = [
     {
         title: "Data Structure Visualizer",
         subtitle: "Interactive learning application",
-        image: "/images/project/data-structure.png",
+        image: "/public/images/project/data-structure.png",
         description:
             "The Data Structure Visualizer is a frontend-focused educational application built to help learners understand how data structures work internally through interactive visual representations.",
         features: [
@@ -86,7 +86,7 @@ const ProjectModels = [
     {
         title: "Keyword Analyzer",
         subtitle: "Mini project for text analysis",
-        image: "/images/project/keyword.png",
+        image: "/public/images/project/keyword.png",
         description:
             "The Keyword Analyzer is a lightweight Java-based application that processes textual input and extracts keyword-related insights, focusing on string manipulation and algorithmic problem solving.",
         features: [
@@ -102,7 +102,7 @@ const ProjectModels = [
     {
         title: "Chat Application",
         subtitle: "Real-time frontend application",
-        image: "/images/project/chat-app.png",
+        image: "/public/images/project/chat-app.png",
         description:
             "The Chat Application is a real-time messaging platform built using React and Firebase. It supports authentication, instant message updates, and efficient state management for responsive user experiences.",
         features: [

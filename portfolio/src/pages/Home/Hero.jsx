@@ -1,69 +1,76 @@
-import { motion } from "framer-motion";
-import { heroContainer, heroItem } from "./homeAnimation";
+import FadeIn from "@/components/animations/FadeIn.jsx";
+import TextReveal from "@/components/animations/TextReveal.jsx";
+import Parallax from "@/components/animations/Parallex.jsx";
+import Button from "@/components/common/Button";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex items-center bg-black text-white px-6">
-            <motion.div
-                variants={heroContainer}
-                initial="hidden"
-                animate="visible"
-                className="max-w-5xl mx-auto space-y-6"
-            >
-                {/* INTRO LINE */}
-                <motion.p
-                    variants={heroItem}
-                    className="font-mono text-sm text-gray-400"
-                >
-                    Hello, I’m
-                </motion.p>
+        <section className="relative min-h-screen bg-black text-white flex items-center px-6 overflow-hidden">
+            <div className="max-w-6xl mx-auto w-full">
 
-                {/* NAME */}
-                <motion.h1
-                    variants={heroItem}
-                    className="font-display text-5xl md:text-7xl leading-tight"
+                {/* BACKGROUND PARALLAX GLOW */}
+                <Parallax
+                    offset={120}
+                    className="absolute inset-0 -z-10 flex items-center justify-center"
                 >
-                    Aditya Mishra
-                </motion.h1>
+                    <div className="w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl" />
+                </Parallax>
 
-                {/* ROLE */}
-                <motion.h2
-                    variants={heroItem}
-                    className="font-display text-3xl md:text-4xl text-gray-300"
-                >
-                    Java Backend Developer
-                </motion.h2>
+                {/* CONTENT */}
+                <div className="space-y-6 max-w-3xl">
 
-                {/* DESCRIPTION */}
-                <motion.p
-                    variants={heroItem}
-                    className="font-primary text-gray-400 max-w-2xl leading-relaxed"
-                >
-                    I build scalable backend systems using Java and Spring Boot,
-                    and develop modern, responsive user interfaces with React.
-                    I focus on clean architecture, performance, and real-world problem solving.
-                </motion.p>
+                    {/* GREETING */}
+                    <FadeIn>
+                        <p className="font-mono text-sm text-gray-400">
+                            Hello, I’m
+                        </p>
+                    </FadeIn>
 
-                {/* CTA BUTTONS */}
-                <motion.div
-                    variants={heroItem}
-                    className="flex gap-4 pt-6"
-                >
-                    <a
-                        href="/src/pages/Projects/Projects.jsx"
-                        className="px-6 py-3 bg-white text-black font-mono text-sm rounded-lg hover:bg-gray-200 transition"
-                    >
-                        View Projects
-                    </a>
+                    {/* NAME */}
+                    <TextReveal
+                        text="Aditya Mishra"
+                        as="h1"
+                        type="char"
+                        stagger={0.04}
+                        className="font-display text-5xl md:text-7xl leading-tight"
+                    />
 
-                    <a
-                        href="/src/pages/Contact/Contact.jsx"
-                        className="px-6 py-3 border border-white/20 font-mono text-sm rounded-lg hover:border-white/40 transition"
-                    >
-                        Contact Me
-                    </a>
-                </motion.div>
-            </motion.div>
+                    {/* ROLE */}
+                    <TextReveal
+                        text="Java Backend & Full-Stack Developer"
+                        as="h2"
+                        delay={0.3}
+                        className="font-display text-2xl md:text-3xl text-gray-300"
+                    />
+
+                    {/* DESCRIPTION */}
+                    <FadeIn delay={0.5}>
+                        <p className="font-primary text-gray-400 max-w-2xl leading-relaxed">
+                            I build scalable backend systems using Java and Spring Boot,
+                            design event-driven microservices, and develop modern,
+                            responsive user interfaces with React. I focus on clean
+                            architecture, performance, and real-world problem solving.
+                        </p>
+                    </FadeIn>
+
+                    {/* CTA BUTTONS */}
+                    <FadeIn delay={0.7}>
+                        <div className="flex flex-wrap gap-4 pt-4">
+                            <Button to="/projects">
+                                View Projects
+                            </Button>
+
+                            <Button
+                                to="/contact"
+                                variant="secondary"
+                            >
+                                Contact Me
+                            </Button>
+                        </div>
+                    </FadeIn>
+
+                </div>
+            </div>
         </section>
     );
 }
