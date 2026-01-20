@@ -1,5 +1,5 @@
-import SectionHeader from "../components/SectionHeader";
-import ProjectCard from "../components/ProjectCard";
+import SectionHeader from "../components/SectionHeader.jsx";
+import ProjectCard from "../components/ProjectCard.jsx";
 import projects from "../data/projects";
 
 export default function Project() {

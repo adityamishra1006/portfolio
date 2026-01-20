@@ -73,6 +73,15 @@ export default function ProjectCard({ project }) {
                     {project.description}
                 </p>
 
+                {/* ✅ FEATURES — THIS WAS MISSING */}
+                {project.features?.length > 0 && (
+                    <ul className="mt-4 space-y-2 text-sm text-gray-400 list-disc list-inside">
+                        {project.features.map((feature, index) => (
+                            <li key={index}>{feature}</li>
+                        ))}
+                    </ul>
+                )}
+
                 {/* Tech Stack */}
                 {project.tech?.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-2">
@@ -87,8 +96,8 @@ export default function ProjectCard({ project }) {
                   hover:text-purple-300
                 "
                             >
-                {tech}
-              </span>
+                                {tech}
+                            </span>
                         ))}
                     </div>
                 )}
