@@ -21,7 +21,7 @@ export default function About() {
                                 alt="Aditya Mishra"
                                 className="
                   relative z-10
-                  w-80 h-80
+                  w-110 h-110
                   object-cover
                   rounded-2xl
                   border border-white/10
@@ -90,7 +90,7 @@ export default function About() {
                     w-11 h-11 rounded-lg
                     bg-primary/10 text-primary
                     transition-all duration-300
-                   
+
                   "
                                 >
                                     <span className="text-lg">{`</>`}</span>

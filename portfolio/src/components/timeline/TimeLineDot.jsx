@@ -1,15 +1,15 @@
 const TimelineDot = ({ active = false }) => {
     return (
-        <div
-            className={`
-        relative z-10 flex items-center justify-center
-        w-3 h-3 rounded-full
-        ${active ? "bg-indigo-500" : "bg-gray-500"}
-      `}
-        >
+        <div className="relative flex items-center justify-center">
             {active && (
-                <span className="absolute w-6 h-6 rounded-full bg-indigo-500/20 animate-ping" />
+                <span className="absolute w-6 h-6 rounded-full bg-purple-500/20 blur-md" />
             )}
+            <span
+                className={`
+          w-3 h-3 rounded-full border
+          ${active ? "bg-purple-500 border-purple-400" : "bg-gray-600 border-gray-500"}
+        `}
+            />
         </div>
     );
 };
