@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative h-screen flex items-center justify-center overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden"
             style={{
                 backgroundImage: `url(${heroBg})`,
                 backgroundSize: "cover",
@@ -23,7 +23,7 @@ export default function Hero() {
                     Java Backend & Full Stack Developer
                 </p>
 
-                <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                     Hello, I’m{" "}
                     <span className="text-purple-500">Aditya Mishra</span>
                 </h1>
@@ -38,7 +38,7 @@ export default function Hero() {
 
                     {/* View Projects */}
                     <a href="projects">
-                        <Button className="bg-purple-600 hover:bg-purple-700">
+                        <Button className="bg-purple-600 hover:bg-purple-700 sm:w-auto">
                             View Projects →
                         </Button>
                     </a>
@@ -47,6 +47,7 @@ export default function Hero() {
                     <a
                         href="contact"
                         className="
+                        sm:w-auto
               px-8 py-3 rounded-lg font-medium
               border border-white/30 text-white
               transition-all duration-300

@@ -19,7 +19,7 @@ const MainLayout = () => {
     }, [location.pathname, setActiveNav]);
 
     return (
-        <div className="min-h-screen flex flex-col bg-[#0b0f1a] text-gray-200">
+        <div className=" min-h-screen flex flex-col bg-[#0b0f1a] text-gray-200">
             <Navbar />
 
             {/* Page content (animated by PageTransition in routes.jsx) */}

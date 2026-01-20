@@ -1,65 +1,98 @@
-import Card from "./Card";
-import Badge from "./Badge";
-import { FaGithub } from "react-icons/fa";
+import { Github, ExternalLink } from "lucide-react";
 
 export default function ProjectCard({ project }) {
-    const { title, description, tech, image, github, features } = project;
-
     return (
-        <Card className="overflow-hidden group">
-            {/* Image Section */}
-            <div className="relative">
+        <div
+            className="
+        group relative overflow-hidden
+        rounded-2xl
+        bg-white/5
+        border border-white/10
+        transition-all duration-300
+        hover:border-purple-500/40
+        hover:shadow-[0_0_35px_-15px_rgba(168,85,247,0.6)]
+      "
+        >
+            {/* Project Image */}
+            {project.image && (
                 <img
-                    src={image}
-                    alt={title}
-                    className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
                 />
+            )}
 
-                {/* GitHub Overlay */}
-                <a
-                    href={github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="absolute top-3 right-3 w-10 h-10 flex items-center justify-center
-                     rounded-full bg-black/70 text-white
-                     hover:bg-primary transition"
-                    aria-label="View source code on GitHub"
-                >
-                    <FaGithub />
-                </a>
+            {/* Action Icons */}
+            <div className="absolute top-4 right-4 flex gap-2 z-10">
+                {project.github && (
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        className="
+              p-2 rounded-full
+              bg-black/50
+              text-gray-300
+              transition-all duration-300
+              hover:bg-purple-600
+              hover:text-white
+            "
+                    >
+                        <Github className="w-5 h-5" />
+                    </a>
+                )}
+
+                {project.live && (
+                    <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Live Demo"
+                        className="
+              p-2 rounded-full
+              bg-black/50
+              text-gray-300
+              transition-all duration-300
+              hover:bg-purple-600
+              hover:text-white
+            "
+                    >
+                        <ExternalLink className="w-5 h-5" />
+                    </a>
+                )}
             </div>
 
             {/* Content */}
             <div className="p-6">
-                <h3 className="text-xl font-semibold text-white">
-                    {title}
+                <h3 className="text-lg font-semibold text-white">
+                    {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm text-gray-400 leading-relaxed">
-                    {description}
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                    {project.description}
                 </p>
 
-                {/* Features */}
-                {features && features.length > 0 && (
-                    <ul className="mt-4 space-y-2 text-sm text-gray-400">
-                        {features.map((feature, index) => (
-                            <li key={index} className="flex gap-2">
-                                <span className="text-primary">•</span>
-                                <span>{feature}</span>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-
                 {/* Tech Stack */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                    {tech.map((item, index) => (
-                        <Badge key={index}>
-                            {item}
-                        </Badge>
-                    ))}
-                </div>
+                {project.tech?.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                        {project.tech.map((tech, index) => (
+                            <span
+                                key={index}
+                                className="
+                  px-3 py-1 text-xs rounded-full
+                  bg-white/5 text-gray-300
+                  transition-colors
+                  hover:bg-purple-500/10
+                  hover:text-purple-300
+                "
+                            >
+                {tech}
+              </span>
+                        ))}
+                    </div>
+                )}
             </div>
-        </Card>
+        </div>
     );
 }
