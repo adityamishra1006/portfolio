@@ -1,21 +1,11 @@
-import MainLayout from "./layout/MainLayout.jsx";
+import AppRoutes from "./app/routes";
 
-import Hero from "./section/Hero";
-import About from "./section/About";
-import Skills from "./section/Skills";
-import Projects from "./section/Project";
-import Experience from "./section/Experience";
-import Contact from "./section/Contact";
+/**
+ * Root application component
+ * All routing & layout logic lives outside this file
+ */
+const App = () => {
+    return <AppRoutes />;
+};
 
-export default function App() {
-    return (
-        <MainLayout>
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Experience />
-            <Contact />
-        </MainLayout>
-    );
-}
+export default App;

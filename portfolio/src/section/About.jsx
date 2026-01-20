@@ -1,83 +1,219 @@
 import SectionHeader from "../components/SectionHeader";
-import Card from "../components/Card";
 import profileImg from "../assets/images/profile.png";
 
 export default function About() {
     return (
-        <section id="about" className="py-24">
+        <section id="about" className="py-28">
             <div className="max-w-7xl mx-auto px-6">
-                <SectionHeader title="About Me" subtitle="Who I Am" />
+                <SectionHeader title="About Me" subtitle="The Developer" />
 
-                <div className="grid gap-12 md:grid-cols-2 items-center">
+                <div className="grid gap-16 md:grid-cols-2 items-center">
 
-                    {/* Profile Image */}
+                    {/* ================= PROFILE IMAGE ================= */}
                     <div className="flex justify-center md:justify-start">
-                        <div className="relative">
-                            <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-2xl" />
+                        <div className="relative group">
+
+                            {/* subtle background */}
+                            <div className="absolute inset-0 rounded-2xl bg-primary/10" />
+
                             <img
                                 src={profileImg}
                                 alt="Aditya Mishra"
-                                className="relative z-10 w-64 h-64 object-cover rounded-2xl border border-white/10"
+                                className="
+                  relative z-10
+                  w-80 h-80
+                  object-cover
+                  rounded-2xl
+                  border border-white/10
+                "
                             />
+
+                            {/* hover overlay */}
+                            <div
+                                className="
+                  absolute inset-0 z-20
+                  rounded-2xl
+                  bg-black/70
+                  flex flex-col items-center justify-center
+                  opacity-0 group-hover:opacity-100
+                  transition-opacity duration-300
+                "
+                            >
+                                <h3 className="text-xl font-semibold text-white">
+                                    Aditya Mishra
+                                </h3>
+                                <p className="mt-1 text-sm text-gray-300">
+                                    Full Stack Developer
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Text Content */}
+                    {/* ================= TEXT + INFO ================= */}
                     <div>
                         <p className="text-gray-300 leading-relaxed">
-                            I am a{" "}
+                            I’m a{" "}
                             <span className="text-white font-medium">
-                Java Backend Developer
+                Java Backend & Full Stack Developer
               </span>{" "}
-                            with a strong focus on building scalable, reliable, and
-                            maintainable systems. I enjoy working on backend architectures,
-                            designing clean APIs, and solving real-world engineering problems.
+                            focused on building scalable, maintainable, and production-ready
+                            systems. I enjoy designing backend architectures, clean APIs,
+                            and systems that perform reliably at scale.
                         </p>
 
                         <p className="mt-6 text-gray-300 leading-relaxed">
-                            My experience includes working with modern backend technologies,
-                            microservices-based systems, and performance-oriented designs. I
-                            believe in writing clean code, following best practices, and
-                            continuously improving as an engineer.
+                            My experience spans backend engineering, frontend integration,
+                            and system-level thinking. I value clean code, clarity in design,
+                            and engineering decisions that age well.
                         </p>
 
-                        {/* Info Cards */}
-                        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                            <Card className="p-6">
-                                <h3 className="text-lg font-semibold text-white">
-                                    Backend Focus
-                                </h3>
-                                <p className="mt-2 text-sm text-gray-400">
-                                    Java, Spring Boot, REST APIs, Microservices, Kafka
-                                </p>
-                            </Card>
+                        {/* ================= INFO CARDS ================= */}
+                        <div className="mt-14 grid gap-6 sm:grid-cols-2">
 
-                            <Card className="p-6">
-                                <h3 className="text-lg font-semibold text-white">
-                                    Problem Solver
-                                </h3>
-                                <p className="mt-2 text-sm text-gray-400">
-                                    Data Structures, Algorithms, System Design
-                                </p>
-                            </Card>
+                            {/* Backend First */}
+                            <div
+                                className="
+                  group
+                  flex items-start gap-4
+                  p-5 rounded-xl
+                  bg-white/5
+                  border border-white/10
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-primary/50
+                  hover:shadow-[0_0_28px_-10px_rgba(99,102,241,0.6)]
+                "
+                            >
+                                <div
+                                    className="
+                    flex items-center justify-center
+                    w-11 h-11 rounded-lg
+                    bg-primary/10 text-primary
+                    transition-all duration-300
+                   
+                  "
+                                >
+                                    <span className="text-lg">{`</>`}</span>
+                                </div>
 
-                            <Card className="p-6">
-                                <h3 className="text-lg font-semibold text-white">
-                                    Clean Code
-                                </h3>
-                                <p className="mt-2 text-sm text-gray-400">
-                                    Maintainable architecture, readable code, best practices
-                                </p>
-                            </Card>
+                                <div>
+                                    <h3 className="text-white font-medium">
+                                        Backend First
+                                    </h3>
+                                    <p className="mt-1 text-sm text-gray-400">
+                                        Java, Spring Boot, REST APIs, Microservices, Kafka
+                                    </p>
+                                </div>
+                            </div>
 
-                            <Card className="p-6">
-                                <h3 className="text-lg font-semibold text-white">
-                                    Continuous Learning
-                                </h3>
-                                <p className="mt-2 text-sm text-gray-400">
-                                    Always exploring new technologies and improving skills
-                                </p>
-                            </Card>
+                            {/* Data & Persistence */}
+                            <div
+                                className="
+                  group
+                  flex items-start gap-4
+                  p-5 rounded-xl
+                  bg-white/5
+                  border border-white/10
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-primary/50
+                  hover:shadow-[0_0_28px_-10px_rgba(99,102,241,0.6)]
+                "
+                            >
+                                <div
+                                    className="
+                    flex items-center justify-center
+                    w-11 h-11 rounded-lg
+                    bg-primary/10 text-primary
+                    transition-all duration-300
+
+                  "
+                                >
+                                    <span className="text-lg">DB</span>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-white font-medium">
+                                        Data & Persistence
+                                    </h3>
+                                    <p className="mt-1 text-sm text-gray-400">
+                                        PostgreSQL, MySQL, Redis, Hibernate
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Modern Frontend */}
+                            <div
+                                className="
+                  group
+                  flex items-start gap-4
+                  p-5 rounded-xl
+                  bg-white/5
+                  border border-white/10
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-primary/50
+                  hover:shadow-[0_0_28px_-10px_rgba(99,102,241,0.6)]
+                "
+                            >
+                                <div
+                                    className="
+                    flex items-center justify-center
+                    w-11 h-11 rounded-lg
+                    bg-primary/10 text-primary
+                    transition-all duration-300
+
+                  "
+                                >
+                                    <span className="text-lg">UI</span>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-white font-medium">
+                                        Modern Frontend
+                                    </h3>
+                                    <p className="mt-1 text-sm text-gray-400">
+                                        React, Tailwind CSS, Component-driven UI
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Engineering Mindset */}
+                            <div
+                                className="
+                  group
+                  flex items-start gap-4
+                  p-5 rounded-xl
+                  bg-white/5
+                  border border-white/10
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-primary/50
+                  hover:shadow-[0_0_28px_-10px_rgba(99,102,241,0.6)]
+                "
+                            >
+                                <div
+                                    className="
+                    flex items-center justify-center
+                    w-11 h-11 rounded-lg
+                    bg-primary/10 text-primary
+                    transition-all duration-300
+
+                  "
+                                >
+                                    <span className="text-lg">⚙</span>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-white font-medium">
+                                        Engineering Mindset
+                                    </h3>
+                                    <p className="mt-1 text-sm text-gray-400">
+                                        Clean code, system design, scalability & performance
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

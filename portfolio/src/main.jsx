@@ -1,10 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+
+import AppRoutes from "./app/routes";
+import ErrorBoundary from "./components/system/ErrorBoundary";
+
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <App />
+        <HelmetProvider>
+            <BrowserRouter>
+                <ErrorBoundary>
+                    <AppRoutes />
+                </ErrorBoundary>
+            </BrowserRouter>
+        </HelmetProvider>
     </React.StrictMode>
 );

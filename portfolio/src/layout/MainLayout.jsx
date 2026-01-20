@@ -1,19 +1,35 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
-export default function MainLayout({ children }) {
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer";
+import useUIStore from "../store/uiStore";
+import { navConfig } from "../config/navConfig";
+
+const MainLayout = () => {
+    const location = useLocation();
+    const setActiveNav = useUIStore((s) => s.setActiveNav);
+
+    // Sync active nav with current route
+    useEffect(() => {
+        const match = navConfig.find(
+            (item) => item.path === location.pathname
+        );
+        if (match) setActiveNav(match.id);
+    }, [location.pathname, setActiveNav]);
+
     return (
-        <div className="min-h-screen bg-background text-white antialiased">
-            {/* Navbar */}
+        <div className="min-h-screen flex flex-col bg-[#0b0f1a] text-gray-200">
             <Navbar />
 
-            {/* Main Content */}
-            <main className="relative">
-                {children}
+            {/* Page content (animated by PageTransition in routes.jsx) */}
+            <main className="flex-1">
+                <Outlet />
             </main>
 
-            {/* Footer */}
             <Footer />
         </div>
     );
-}
+};
+
+export default MainLayout;
