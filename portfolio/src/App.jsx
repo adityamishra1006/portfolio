@@ -1,12 +1,11 @@
 import './App.css'
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
 
 function App() {
 
   return (
-      <h1 className="text-5xl font-bold text-blue-600">
-          Tailwind Working 🚀
-      </h1>
-
+      <About/>
   )
 }
 
