@@ -13,7 +13,7 @@ export default function ProjectCard({ project }) {
         hover:shadow-[0_0_35px_-15px_rgba(168,85,247,0.6)]
       "
         >
-            
+
             {/* Project Image */}
             {project.image && (
                 <img

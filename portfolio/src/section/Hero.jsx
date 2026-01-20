@@ -1,7 +1,10 @@
 import heroBg from "../assets/images/hero-bg.png";
 import Button from "../components/Button.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+    const navigate = useNavigate();
+
     return (
         <section
             id="home"
@@ -18,17 +21,16 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative z-10 max-w-5xl px-6 text-center">
-
                 <p className="text-sm uppercase tracking-widest text-gray-400">
                     Java Backend & Full Stack Developer
                 </p>
 
-                <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-bold text-white">
                     Hello, I’m{" "}
                     <span className="text-purple-500">Aditya Mishra</span>
                 </h1>
 
-                <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-3xl mx-auto">
                     I build scalable backend systems, clean APIs, and modern web
                     applications with a strong focus on performance, reliability,
                     and long-term maintainability.
@@ -37,25 +39,21 @@ export default function Hero() {
                 <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
 
                     {/* View Projects */}
-                    <a href="projects">
-                        <Button className="bg-purple-600 hover:bg-purple-700 sm:w-auto">
-                            View Projects →
-                        </Button>
-                    </a>
+                    <Button
+                        onClick={() => navigate("/projects")}
+                        className="bg-purple-600 hover:bg-purple-700 w-full sm:w-auto"
+                    >
+                        View Projects →
+                    </Button>
 
                     {/* Contact Me */}
-                    <a
-                        href="contact"
-                        className="
-                        sm:w-auto
-              px-8 py-3 rounded-lg font-medium
-              border border-white/30 text-white
-              transition-all duration-300
-              hover:bg-white/10
-            "
+                    <Button
+                        variant="outline"
+                        onClick={() => navigate("/contact")}
+                        className="w-full sm:w-auto border border-white/30 text-white hover:bg-white/10"
                     >
                         Contact Me
-                    </a>
+                    </Button>
 
                 </div>
             </div>
