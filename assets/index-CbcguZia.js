@@ -135,7 +135,7 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
               transition-all duration-300\r
               hover:bg-purple-600\r
               hover:text-white\r
-            `,children:S.jsx(nM,{className:"w-5 h-5"})})]}),S.jsxs("div",{className:"p-6",children:[S.jsx("h3",{className:"text-lg font-semibold text-white",children:a.title}),S.jsx("p",{className:"mt-2 text-sm text-gray-400 leading-relaxed",children:a.description}),a.tech?.length>0&&S.jsx("div",{className:"mt-4 flex flex-wrap gap-2",children:a.tech.map((i,s)=>S.jsx("span",{className:`\r
+            `,children:S.jsx(nM,{className:"w-5 h-5"})})]}),S.jsxs("div",{className:"p-6",children:[S.jsx("h3",{className:"text-lg font-semibold text-white",children:a.title}),S.jsx("p",{className:"mt-2 text-sm text-gray-400 leading-relaxed",children:a.description}),a.features?.length>0&&S.jsx("ul",{className:"mt-4 space-y-2 text-sm text-gray-400 list-disc list-inside",children:a.features.map((i,s)=>S.jsx("li",{children:i},s))}),a.tech?.length>0&&S.jsx("div",{className:"mt-4 flex flex-wrap gap-2",children:a.tech.map((i,s)=>S.jsx("span",{className:`\r
                   px-3 py-1 text-xs rounded-full\r
                   bg-white/5 text-gray-300\r
                   transition-colors\r
