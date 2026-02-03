@@ -82,9 +82,9 @@ export default function Skills() {
                     <p className="mt-4 text-gray-400 max-w-3xl mx-auto leading-relaxed">
                         Technology never stands still, and neither do I. I'm currently
                         exploring{" "}
-                        <span className="text-purple-400">System Desing</span>{" "}
+                        <span className="text-purple-400">Data Structures, Algorithms</span>{" "}
                         and{" "}
-                        <span className="text-purple-400">DevOps</span>{" "}
+                        <span className="text-purple-400">System Design</span>{" "}
                         to broaden my horizons.
                     </p>
                 </div>
