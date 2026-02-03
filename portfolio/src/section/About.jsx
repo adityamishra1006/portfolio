@@ -5,7 +5,7 @@ export default function About() {
     return (
         <section id="about" className="py-28">
             <div className="max-w-7xl mx-auto px-6">
-                <SectionHeader title="About Me" subtitle="The Developer" />
+                <SectionHeader title="About Me" subtitle="Full-Stack Developer" />
 
                 <div className="grid gap-16 md:grid-cols-2 items-center">
 
