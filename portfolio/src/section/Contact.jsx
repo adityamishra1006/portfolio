@@ -58,6 +58,18 @@ export default function Contact() {
                                 </div>
                             </div>
 
+                            <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                                <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-primary/10 text-primary">
+                                    📞
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-400">Phone</p>
+                                    <p className="text-white font-medium">
+                                        +91 7763979170
+                                    </p>
+                                </div>
+                            </div>
+
                             {/* Location */}
                             <div className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
                                 <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-primary/10 text-primary">
