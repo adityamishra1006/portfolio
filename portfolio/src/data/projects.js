@@ -5,27 +5,78 @@ import ecommerceImg from "../assets/images/projects/ecommerce.png";
 import keywordImg from "../assets/images/projects/keyword.png";
 import dsaImg from "../assets/images/projects/data-structure.png";
 import chatImg from "../assets/images/projects/chat-app.png";
+import arogyaFlowImg from "../assets/images/projects/arogyaFlowImg.png";
 
 const projects = [
+
+    {
+        id: 8,
+        title: "Arogya Flow – OPD Token Management System",
+        description:
+            "Arogya Flow is a backend-focused OPD token management system designed to streamline patient flow in hospitals and clinics. The system replaces manual queues with a structured, rule-driven token allocation process, ensuring fair and efficient handling of patients. Doctors are assigned time-based slots, and tokens are generated based on availability, priority, and slot capacity. " +
+            "The application is built with clean layered architecture, keeping controllers thin and moving all business rules into dedicated service and allocation layers. Core logic such as slot validation, token capacity checks, priority handling (emergency, walk-in, online), and time-based constraints is centralized to improve maintainability and testability. PostgreSQL is used for persistent storage, while global exception handling ensures consistent and meaningful API responses. The design closely reflects real-world hospital workflows and is suitable for scalable OPD systems.",
+
+        features: [
+            "Doctor availability and time-slot management",
+            "OPD token generation with slot capacity validation",
+            "Priority-based token allocation (Emergency, Walk-in, Online)",
+            "Prevention of overbooking using strict business rules",
+            "Real-time slot status tracking (OPEN, FULL, CLOSED)",
+            "Clean RESTful APIs with DTO-based request and response handling",
+            "Centralized exception handling for consistent error responses",
+            "Thin controller and service-driven architecture",
+            "Persistent data storage using PostgreSQL"
+        ],
+
+        tech: [
+            "Java",
+            "Spring Boot",
+            "Spring Web MVC",
+            "Spring Data JPA",
+            "Hibernate",
+            "REST APIs",
+            "PostgreSQL",
+            "Lombok",
+            "Validation",
+            "Maven"
+        ],
+
+        image: arogyaFlowImg,
+        github: "https://github.com/adityamishra1006/arogya-flow.git",
+    },
+
     {
         id: 1,
         title: "E-Wallet Application",
         description:
-            "A secure and scalable digital wallet system that allows users to manage balances, perform transactions, and track payment history with strong emphasis on backend reliability and transactional consistency.",
+            "This project is a secure and scalable digital wallet system designed using a microservices-based architecture. The system allows users to create and manage wallets, check real-time balances, and perform credit and debit transactions in a safe and controlled manner. Each core responsibility such as user management, wallet handling, transaction processing, and notifications is separated into independent services, which improves scalability, maintainability, and fault isolation. " +
+            "The backend is built with a strong focus on reliability and data consistency. Financial operations are handled using transactional processing to ensure accuracy and ACID compliance. Redis is used to cache frequently accessed data like wallet balances to improve performance and reduce database load, while Apache Kafka enables asynchronous, event-driven communication between services. This design ensures the system can handle high traffic efficiently while maintaining data integrity, making it suitable for real-world wallet and payment-based applications.",
+
         features: [
-            "Secure user authentication using JWT",
+            "Secure user authentication and user management",
             "Wallet balance management with transactional safety",
-            "Transaction history tracking",
-            "RESTful APIs for wallet operations",
-            "Data consistency handling for financial operations",
+            "Credit and debit transaction processing",
+            "Seamless wallet top-up using Razorpay",
+            "RESTful APIs for wallet and transaction operations",
+            "Event-driven communication using Apache Kafka",
+            "High-performance caching using Redis",
+            "Data consistency and ACID compliance for financial operations",
+            "Maven multi-module, microservices-based architecture"
         ],
         tech: [
             "Java",
             "Spring Boot",
+            "Spring Web MVC",
+            "Spring Data JPA",
+            "Validation",
             "REST APIs",
             "Microservices",
             "MySQL",
-            "JWT",
+            "Redis",
+            "Apache Kafka",
+            "Razorpay Payment Gateway",
+            "Lombok",
+
         ],
         image: eWalletImg,
         github: "https://github.com/adityamishra1006/e-wallet-project.git",
